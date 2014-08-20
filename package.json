@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "license": "MIT",
   "description": "View your ionic apps right in your editor.",
-  "repository": "https://github.com/nickgartmann/ionic-atom",
+  "repository": "https://github.com/RokkinCat/ionic-atom",
   "engines": {
     "atom": ">0.108.0"
   }
