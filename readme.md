@@ -23,3 +23,4 @@ This will open a new pane with your app displayed in it.
 * Auto-start the ionic server
 * Better access to dev logs
 * CONTRIBUTE.md
+* Specs
