@@ -13,7 +13,9 @@ apm install ionic-atom
 ionic serve -b
 ```
 
-Then hit `Cmd + P` in atom and use the command `Ionic: Preview`
+Then hit `Cmd + Shift + P` in atom and use the command `Ionic: Preview`
+
+(note: if you don't see `Ionic: Preview` in the list you may need to restart atom)
 
 This will open a new pane with your app displayed in it.
 
