@@ -1,7 +1,7 @@
 {
   "name": "ionic-atom",
   "main": "./lib/ionic",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "license": "MIT",
   "description": "View your ionic apps right in your editor.",
   "repository": "https://github.com/RokkinCat/ionic-atom",
