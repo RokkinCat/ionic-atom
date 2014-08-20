@@ -1,0 +1,64 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', '-g', 'apm' ]
+2 info using npm@2.0.0-alpha-5
+3 info using node@v0.10.26
+4 verbose cache add [ 'apm', null ]
+5 verbose cache add spec="apm" args=["apm",null]
+6 verbose parsed spec { raw: 'apm',
+6 verbose parsed spec   scope: null,
+6 verbose parsed spec   name: 'apm',
+6 verbose parsed spec   rawSpec: '',
+6 verbose parsed spec   spec: '*',
+6 verbose parsed spec   type: 'range' }
+7 verbose addNamed [ 'apm', '*' ]
+8 verbose addNamed [ null, '*' ]
+9 silly lockFile 0f70a443-apm apm@*
+10 verbose lock apm@* /Users/nickgartmann/.npm/0f70a443-apm.lock
+11 silly addNameRange { name: 'apm', range: '*', hasData: false }
+12 verbose mapToRegistry name apm
+13 verbose mapToRegistry uri https://registry.npmjs.org/apm
+14 verbose request where is /apm
+15 verbose request registry https://registry.npmjs.org/
+16 verbose request id ca28b3ed28ef0aa4
+17 verbose request url raw /apm
+18 verbose request url resolving [ 'https://registry.npmjs.org/', './apm' ]
+19 verbose request url resolved https://registry.npmjs.org/apm
+20 verbose request where is https://registry.npmjs.org/apm
+21 verbose request no basic auth needed
+22 info trying registry request attempt 1 at 00:34:16
+23 verbose etag "2EJWNMW8MG6AU3QFS3XV12MWQ"
+24 http GET https://registry.npmjs.org/apm
+25 http 404 https://registry.npmjs.org/apm
+26 silly registry.get cb [ 404,
+26 silly registry.get   { date: 'Wed, 20 Aug 2014 05:34:16 GMT',
+26 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R14B04)',
+26 silly registry.get     etag: '"2EJWNMW8MG6AU3QFS3XV12MWQ"',
+26 silly registry.get     'content-type': 'application/json',
+26 silly registry.get     'cache-control': 'max-age=0',
+26 silly registry.get     'content-length': '1638',
+26 silly registry.get     'accept-ranges': 'bytes',
+26 silly registry.get     via: '1.1 varnish',
+26 silly registry.get     age: '0',
+26 silly registry.get     'x-served-by': 'cache-ord1721-ORD',
+26 silly registry.get     'x-cache': 'MISS',
+26 silly registry.get     'x-cache-hits': '0',
+26 silly registry.get     'x-timer': 'S1408512856.266952,VS0,VE214',
+26 silly registry.get     vary: 'Accept',
+26 silly registry.get     'keep-alive': 'timeout=10, max=50',
+26 silly registry.get     connection: 'Keep-Alive' } ]
+27 silly lockFile 0f70a443-apm apm@*
+28 silly lockFile 0f70a443-apm apm@*
+29 error 404 Not Found
+29 error 404
+29 error 404 'apm' is not in the npm registry.
+29 error 404 You should bug the author to publish it
+29 error 404
+29 error 404 Note that you can also install from a
+29 error 404 tarball, folder, or http url, or git url.
+30 error System Darwin 14.0.0
+31 error command "node" "/usr/local/bin/npm" "install" "-g" "apm"
+32 error cwd /Users/nickgartmann/Dropbox/Development/prototypes/ionic-atom
+33 error node -v v0.10.26
+34 error npm -v 2.0.0-alpha-5
+35 error code E404
+36 verbose exit [ 1, true ]

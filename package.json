@@ -1,0 +1,9 @@
+{
+  "name": "ionic-atom",
+  "main": "./lib/ionic",
+  "version": "0.0.0",
+  "description": "View your ionic apps right in your editor.",
+  "engines": {
+    "atom": ">0.108.0"
+  }
+}
