@@ -13,8 +13,8 @@ class WebBrowserPreviewView extends ScrollView
     @url = params.url
     @.on 'load', ->
       $(window).on 'resize',  ->
-        height = me[0].parentNode.scrollHeight
-        if height < me.height()
+        height = me[0].parentNode?.scrollHeight
+        if height? and height < me.height()
           me.css("transform", "scale(" + ((height - 100) / me.height()) + ")")
         else
           me.css("transform", "none")
@@ -22,8 +22,8 @@ class WebBrowserPreviewView extends ScrollView
   go: ->
     me = $(@)
     @.src = @url
-    height = me[0].parentNode.scrollHeight
-    if height < me.height()
+    height = me[0].parentNode?.scrollHeight
+    if height? and height < me.height()
       me.css("transform", "scale(" + ((height - 100) / me.height()) + ")")
     else
       me.css("transform", "none")
@@ -52,6 +52,7 @@ module.exports =
 
       http.get(uri.format(), ->
         preview.go()
+        atom.workspace.activateNextPane()
       ).on('error', ->
         atom.workspace.destroyActivePaneItem()
         alert("You have to start the ionic server first!")
