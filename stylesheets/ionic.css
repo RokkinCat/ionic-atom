@@ -1,6 +1,14 @@
-.iphone {
+.iphone-5 {
   width: 320px;
   height: 568px;
+  margin: auto;
+  border: none;
+  display: none;
+}
+
+.moto-x {
+  width: 360px;
+  height: 640px;
   margin: auto;
   border: none;
   display: none;
