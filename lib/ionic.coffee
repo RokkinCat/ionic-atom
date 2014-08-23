@@ -5,12 +5,13 @@ http = require("http")
 
 class WebBrowserPreviewView extends ScrollView
   @content: (params) ->
-    @iframe outlet: "frame", class: "iphone", src: params.url, sandbox: "none"
+    @iframe outlet: "frame", class: params.platform, src: params.url, sandbox: "none"
   getTitle: ->
-    "Ionic: Preview"
+    "Ionic: Preview " + @platform
   initialize: (params) ->
     me = $(@)
     @url = params.url
+    @platform = params.platform
     @.on 'load', ->
       $(window).on 'resize',  ->
         height = me[0].parentNode?.scrollHeight
@@ -34,7 +35,16 @@ class WebBrowserPreviewView extends ScrollView
 
 module.exports =
   activate: ->
-    atom.workspaceView.command "ionic:preview", =>
+    me = $(@)
+    me.platform = 'iphone-5'
+    atom.workspaceView.command "ionic:preview-iPhone-4", =>
+      me.platform = 'iphone-4'
+      atom.workspace.open "ionic://localhost:8100", split: "right"
+    atom.workspaceView.command "ionic:preview-iPhone-5", =>
+      me.platform = 'iphone-5'
+      atom.workspace.open "ionic://localhost:8100", split: "right"
+    atom.workspaceView.command "ionic:preview-moto-x", =>
+      me.platform = 'moto-x'
       atom.workspace.open "ionic://localhost:8100", split: "right"
 
     atom.workspace.registerOpener (uri) ->
@@ -48,7 +58,7 @@ module.exports =
       uri = url.parse(uri)
       uri.protocol = "http:"
 
-      preview = new WebBrowserPreviewView(url: uri.format())
+      preview = new WebBrowserPreviewView(url: uri.format(), platform: me.platform)
 
       http.get(uri.format(), ->
         preview.go()
