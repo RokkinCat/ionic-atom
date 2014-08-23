@@ -7,7 +7,7 @@ class WebBrowserPreviewView extends ScrollView
   @content: (params) ->
     @iframe outlet: "frame", class: params.platform, src: params.url, sandbox: "none"
   getTitle: ->
-    "Ionic: Preview" + @platform
+    "Ionic: Preview " + @platform
   initialize: (params) ->
     me = $(@)
     @url = params.url
@@ -37,6 +37,9 @@ module.exports =
   activate: ->
     me = $(@)
     me.platform = 'iphone-5'
+    atom.workspaceView.command "ionic:preview-iPhone-4", =>
+      me.platform = 'iphone-4'
+      atom.workspace.open "ionic://localhost:8100", split: "right"
     atom.workspaceView.command "ionic:preview-iPhone-5", =>
       me.platform = 'iphone-5'
       atom.workspace.open "ionic://localhost:8100", split: "right"

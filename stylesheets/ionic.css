@@ -1,3 +1,11 @@
+.iphone-4 {
+  width: 320px;
+  height: 480px;
+  margin: auto;
+  border: none;
+  display: none;
+}
+
 .iphone-5 {
   width: 320px;
   height: 568px;
