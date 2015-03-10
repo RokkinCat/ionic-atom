@@ -5,7 +5,7 @@ http = require("http")
 
 class WebBrowserPreviewView extends ScrollView
   @content: (params) ->
-    @iframe outlet: "frame", class: "iphone", src: params.url, sandbox: "none"
+    @iframe outlet: "frame", class: "iphone", src: params.url, sandbox: "allow-same-origin allow-scripts"
   getTitle: ->
     "Ionic: Preview"
   initialize: (params) ->
@@ -34,7 +34,7 @@ class WebBrowserPreviewView extends ScrollView
 
 module.exports =
   activate: ->
-    atom.workspaceView.command "ionic:preview", =>
+    atom.commands.add 'atom-text-editor', 'ionic: preview', ->
       atom.workspace.open "ionic://localhost:8100", split: "right"
 
     atom.workspace.registerOpener (uri) ->
@@ -42,7 +42,6 @@ module.exports =
         {protocol, host, pathname} = url.parse(uri)
       catch
         return
-
       return unless protocol is "ionic:"
 
       uri = url.parse(uri)
