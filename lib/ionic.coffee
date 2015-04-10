@@ -5,7 +5,7 @@ http = require("http")
 
 class WebBrowserPreviewView extends ScrollView
   @content: (params) ->
-    @iframe outlet: "frame", class: "iphone", src: params.url, sandbox: "none"
+    @iframe outlet: "frame", class: "iphone", src: params.url, sandbox: "allow-same-origin allow-scripts"
   getTitle: ->
     "Ionic: Preview"
   initialize: (params) ->
