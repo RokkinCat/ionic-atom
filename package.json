@@ -6,6 +6,6 @@
   "description": "View your ionic apps right in your editor.",
   "repository": "https://github.com/RokkinCat/ionic-atom",
   "engines": {
-    "atom": ">0.108.0"
+    "atom": ">1.0.0"
   }
 }
